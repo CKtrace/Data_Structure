@@ -3,14 +3,14 @@
 #include <time.h>
 
 int sumAlgorithmA(int n) {
-	// ½Ã°£ º¹Àâµµ O(1)
+	// ì‹œê°„ ë³µì¡ë„ O(1)
 	int sum = 0;
 	sum = n*(n + 1) / 2;
 	//printf("%d\n", sum);
 }
 
 int  sumAlgorithmB(int n) {
-	// ½Ã°£ º¹Àâµµ O(n)
+	// ì‹œê°„ ë³µì¡ë„ O(n)
 	int sum = 0;
 	for (int i = 1; i <= n; i++)
 	{
@@ -20,7 +20,7 @@ int  sumAlgorithmB(int n) {
 }
 
 int sumAlgorithmC(int n) {
-	// ½Ã°£ º¹Àâµµ O(n**2)
+	// ì‹œê°„ ë³µì¡ë„ O(n**2)
 	int sum = 0;
 	for (int i = 0; i <= n; i++)
 	{
@@ -32,51 +32,51 @@ int sumAlgorithmC(int n) {
 }
 
 int timeCheckA() {
-	// A ¾Ë°í¸®Áò ½Ã°£ Ã¼Å©
+	// A ì•Œê³ ë¦¬ì¦˜ ì‹œê°„ ì²´í¬
 
 	clock_t start, finish;
 	double duration;
 	start = clock();
 
-	sumAlgorithmA(5); //¿øÇÏ´Â n °ª ´ëÀÔ
+	sumAlgorithmA(5); //ì›í•˜ëŠ” n ê°’ ëŒ€ì…
 
 	finish = clock();
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
-	printf("%.30f ÃÊÀÔ´Ï´Ù.\n", duration);
+	printf("%.30f ì´ˆì…ë‹ˆë‹¤.\n", duration);
 	return duration;
 }
 
 int timeCheckB() {
-	// B ¾Ë°í¸®Áò ½Ã°£ Ã¼Å©
+	// B ì•Œê³ ë¦¬ì¦˜ ì‹œê°„ ì²´í¬
 
 	clock_t start, finish;
 	double duration;
 	start = clock();
 
-	sumAlgorithmB(5); //¿øÇÏ´Â n °ª ´ëÀÔ
+	sumAlgorithmB(5); //ì›í•˜ëŠ” n ê°’ ëŒ€ì…
 
 	finish = clock();
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
-	printf("%.30f ÃÊÀÔ´Ï´Ù.\n", duration);
+	printf("%.30f ì´ˆì…ë‹ˆë‹¤.\n", duration);
 	return duration;
 }
 
 int timeCheckC(){
-	// C ¾Ë°í¸®Áò ½Ã°£ Ã¼Å©
+	// C ì•Œê³ ë¦¬ì¦˜ ì‹œê°„ ì²´í¬
 
 	clock_t start, finish;
 	double duration;
 	start = clock();
 
-	sumAlgorithmC(5); //¿øÇÏ´Â n °ª ´ëÀÔ
+	sumAlgorithmC(5); //ì›í•˜ëŠ” n ê°’ ëŒ€ì…
 
 	finish = clock();
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
-	printf("%.30f ÃÊÀÔ´Ï´Ù.\n", duration);
+	printf("%.30f ì´ˆì…ë‹ˆë‹¤.\n", duration);
 	return duration;
 }
 
-int main() {
+void main() {
 	timeCheckA();
 	timeCheckB();
 	timeCheckC();
