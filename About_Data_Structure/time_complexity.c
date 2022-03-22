@@ -1,5 +1,6 @@
-<a href = "https://cktrace.tistory.com/31">Code Review</a>
-
+/*
+Code Review : https://cktrace.tistory.com/31
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
